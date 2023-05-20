@@ -1,11 +1,14 @@
 import { ReactNode } from 'react'
 import './globals.css'
 import {
-  Roboto_Flex as Roboto,
+  Roboto_Flex as RobotoFlex,
   Bai_Jamjuree as BaiJamjuree,
 } from 'next/font/google'
 
-const roboto = Roboto({ subsets: ['latin'], variable: '--font-roboto' })
+const robotoFlex = RobotoFlex({
+  subsets: ['latin'],
+  variable: '--font-roboto',
+})
 
 const baiJamjuree = BaiJamjuree({
   subsets: ['latin'],
@@ -23,7 +26,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body
-        className={`${roboto.variable} ${baiJamjuree.variable} bg-gray-900 font-sans text-gray-100`}
+        className={`${robotoFlex.variable} ${baiJamjuree.variable} bg-gray-900 font-sans text-gray-100`}
       >
         {children}
       </body>
